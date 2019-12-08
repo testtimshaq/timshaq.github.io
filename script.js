@@ -3,6 +3,7 @@ $(function(){
 	const disableScroll = function(disableScroll){
 		$('body').css({
 				'position': 'fixed',
+				'width': '100%',
  				'height': '100%',
  				'overflow': 'hidden'
 
@@ -10,8 +11,8 @@ $(function(){
 	};
 
 	const enableScroll = function(enableScroll){
-		$('html','body').css({
-			
+		$('body').css({
+			'position': 'relative',
  			'overflow': 'auto'
 		});
 	};
