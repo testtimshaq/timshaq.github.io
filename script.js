@@ -2,14 +2,16 @@ $(function(){
 
 	const disableScroll = function(disableScroll){
 		$('body').css({
- 				 'height': '100%',
- 				 'overflow': 'hidden'
+				'position': 'fixed',
+ 				'height': '100%',
+ 				'overflow': 'hidden'
+
 			})
 	};
 
 	const enableScroll = function(enableScroll){
-		$('body').css({
-			'height': '100%',
+		$('html','body').css({
+			
  			'overflow': 'auto'
 		});
 	};
