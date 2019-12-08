@@ -43,7 +43,7 @@ a {
 }
 #searcher {
 	position: absolute;
-	top: 45px;
+	top: 50px;
 	left: 930px;
 	z-index: 10;
 }
@@ -87,9 +87,13 @@ a {
 
 #search {
 	width: 320px;
+	height: 30px;
 	position: absolute;
 	top: 42px;
 	right: 0;
+	border: 1px solid silver;
+	border-radius: 35px;
+	background-color: silver;
 }
 
 #menu-container {
@@ -146,6 +150,34 @@ a {
 			background-image: url('img/icon-comments.png');
 			background-repeat: no-repeat;
 		}
+
+
+#fixer-item {
+	font-size: 14px;
+	border-top: 1px solid #e5e5e5;
+}
+
+#fixer-item h2 {
+	margin-bottom: 0;
+}
+
+
+#fixer-left {
+	padding-left: 18px;
+	float: left;
+	width: 107px;
+}
+
+#fixer-right {
+	float: right;
+	width: 70px;
+	padding-left: 45px;
+}
+
+#buttons {
+	margin-top: 100px;
+	margin: 0 auto;
+}
 
 #column-center {
 	width: 420px;
@@ -519,3 +551,22 @@ a {
 	padding: 20px;
 	margin: 40px auto;
 }
+
+
+#changeButton {
+	width: 200px;
+	height: 50px;
+	margin: 20px 25px;
+	border-radius: 35px;
+	background-color: white;
+	border: 1px solid blue;
+	color: blue;
+	font-size: 16px;
+	}
+
+/*#popup-left {
+	float: left;
+	width: 20px;
+	margin-left: 20px;
+	z-index: 20;
+}*/

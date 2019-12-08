@@ -18,27 +18,33 @@ $(function(){
 	};
 
 
-	// 	const disableScroll = function(){
-	// 	$('html','body').on('mousewheel',function(){
-	// 		return false;
-	// 	})
-	// };
+		$.get(
+			'http://data.fixer.io/api/latest',
+			{'access_key':'99196eb9a1a4b1d51a39843e7a39ca94',
+			'base':'EUR'},
+			function(response){
+				var euro = response.rates.RUB;
+				var eurrub = euro.toFixed(2);
+				var eurusd = response.rates.USD;
+				var usdrub = (eurrub/eurusd).toFixed(2);
+				$('#eur-rub').text(eurrub);
+				$('#usd-rub').text(usdrub);
+				
+				// var gbp = response.rates.GBP;
+				// var chf = response.rates.CHF;
+				// var jpy = response.rates.JPY;
 
+				// var other = eurrub+eurusd+gbp+chf+jpy;
+				// console.log(other);
+			});
 
-	// const enableScroll = function(){
-	// 	$('html','body').off('mousewheel');
-	// };
 
 	$('#changeButton')
-	.css({
-		'margin-left': '20px',
-		'margin-bottom': '40px'
-	})
 	.click(function(fadeIn){
 		$('#popup-container').fadeIn(400, disableScroll);
 		$('#popup').animate({
-			width: '200px',
-			height: '300px'
+			width: '300px',
+			height: '500px'
 		}, 400);
 	});
 
