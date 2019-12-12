@@ -1,7 +1,7 @@
 html,body {
 	margin: 0;
 	padding: 0;
-	min-width: 1000px;
+	min-width: 320px;
 	font-family: Arial;
 }
 
@@ -28,13 +28,14 @@ a {
 }
 
 .fixed-container {
-	width: 960px;
+	max-width: 960px;
 	margin: 0 auto;
 	position: relative;
 }
 
 #datetime {
 	float: right;
+
 }
 
 #header {
@@ -43,14 +44,20 @@ a {
 }
 #searcher {
 	position: absolute;
-	top: 50px;
-	left: 930px;
+	top: 53px;
+	left: 95%;
 	z-index: 10;
 }
 
 #logo {
 	position: absolute;
 	top: 40px;
+}
+
+#small-menu {
+	position: absolute;
+	top: 50px;
+	display: none;
 }
 
 #select-city {
@@ -62,13 +69,13 @@ a {
 #day-week {
 	position: absolute;
 	top: 56px;
-	right: 576px;
+	right: 55%;
 }
 
 #time-now {
 	position: absolute;
 	top: 56px;
-	right: 481px;
+	right: 46%;
 	padding-left: 26px;
 	padding-bottom: 2px;
 	background-image: url(img/time.png);
@@ -78,7 +85,7 @@ a {
 #temp {
 	position: absolute;
 	top: 56px;
-	right: 368px;
+	right: 35%;
 	padding-left: 39px;
 	padding-bottom: 4px;
 	background-image: url(img/cloud.png);
@@ -86,14 +93,15 @@ a {
 }
 
 #search {
-	width: 320px;
+	width: 30%;
 	height: 30px;
 	position: absolute;
-	top: 42px;
+	top: 45px;
 	right: 0;
-	border: 1px solid silver;
+	border: 1px solid #f3f3f3;
 	border-radius: 35px;
-	background-color: silver;
+	background-color: #f3f3f3;
+	padding-left: 15px;
 }
 
 #menu-container {
@@ -108,14 +116,14 @@ a {
 	color: black;
 }
 
+
 #column-left {
 	background-color: #FFFFFF;
-	width: 250px;
-	float: left;
+	min-width: 250px;
 }
 
 	.news-item {
-		padding-left: 18px;
+		padding: 0 18px;
 		margin-bottom: 27px;
 		font-size: 14px;
 	}
@@ -164,6 +172,7 @@ a {
 
 #fixer-left {
 	padding-left: 18px;
+	padding-right: 20%;
 	float: left;
 	width: 107px;
 }
@@ -171,18 +180,26 @@ a {
 #fixer-right {
 	float: right;
 	width: 70px;
-	padding-left: 45px;
+	padding-left: 20%;
 }
 
 #buttons {
-	margin-top: 100px;
-	margin: 0 auto;
+	margin: 100px auto 0;
+	min-height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 #column-center {
-	width: 420px;
-	margin-left: 20px;
-	float: left;
+	margin: 0 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#small-center {
+	display: none;
 }
 
 .main-banner {
@@ -233,7 +250,6 @@ a {
 	margin-top: 20px;
 	height: 500px;
 	width: 200px;
-	float: left;
 	margin-right: 10px;
 }
 
@@ -280,7 +296,6 @@ a {
 	margin-top: 20px;
 	height: 500px;
 	width: 200px;
-	float: right;
 }
 
 #column-center-2 img {
@@ -294,14 +309,14 @@ a {
 	background-repeat: repeat-x;
 }
 
-#central-container .fixed-container {
+/*#central-container .fixed-container {
 	overflow-y: hidden;
-}
+}*/
 
 #column-right {
-	width: 250px;
-	float: right;
+	min-width: 250px;
 }
+
 
 #column-right img {
 	margin-bottom: 20px;
@@ -316,6 +331,7 @@ a {
 
 
 .bottom-banner {
+	height: 280px;
 	position: relative;
 }
 .bottom-banner a {
@@ -416,6 +432,7 @@ a {
 			background-image: url('img/icon-comments.png');
 			background-repeat: no-repeat;
 		}
+
 
 #footer-1 {
 	background-color: #00122f;
@@ -556,7 +573,6 @@ a {
 #changeButton {
 	width: 200px;
 	height: 50px;
-	margin: 20px 25px;
 	border-radius: 35px;
 	background-color: white;
 	border: 1px solid blue;
@@ -570,3 +586,213 @@ a {
 	margin-left: 20px;
 	z-index: 20;
 }*/
+#small-logo {
+	display: none;
+}
+#small-info {
+	display: none;
+}
+#flex-container {
+	display: flex;
+}
+
+@media (max-width: 830px) {
+	#flex-container {
+		flex-wrap: wrap;
+		justify-content: space-around;	
+		align-items: flex-start;	
+	}
+	#column-center {
+		order: -1;
+		margin: 0 0 20px;
+
+	}
+	#top-news {
+		order: -1;
+		flex-basis: 500px;
+	}
+
+	.main-banner {
+		width: 500px;
+	}
+	#news-day {
+		flex-basis: 500px;
+	}
+	#column-right {
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-around;
+	}
+	#small-info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-content: center;
+		height: 100px;
+		background-image: url(img/info-bg.png);
+		background-repeat: repeat-x;
+		background-color: white;
+		flex-basis: 500px;
+	}
+	#small-info div {
+		position: relative;
+		top: 0;
+		right: 0;
+		padding-bottom: 0;
+	}
+	#info {
+		display: none;
+	}
+	#central-container {
+		padding-top: 0;
+	}
+}
+
+@media (max-width: 535px) {
+	#small-info {
+		flex-basis: 320px;
+	}
+	#column-center {
+		justify-content: center;
+	}
+	#central-banner {
+		display: flex;
+	}
+	.main-banner {
+		width: 320px;
+	}
+	.central-banner-txt {
+		font-size: 12px;
+		position: absolute;
+		top: 100px;
+		left: 0;
+
+	}
+	.central-categ {
+		font-size: 10px;
+		position: absolute;
+		top: 80px;
+		left: 0;
+	}
+	.cental-date {
+		font-size: 10px;
+		position: absolute;
+		top: 180px;
+		left: 0;
+		margin-left: 20px;
+	}
+	.central-time {
+		font-size: 10px;
+		position: absolute;
+		top: 180px;
+		left: 100px;
+	}
+	#column-center-1 {
+		width: 320px;
+		height: 600px;
+		margin-right: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#column-center-1 img {
+		width: 320px;
+	}
+	#column-center-2 {
+		width: 320px;
+		height: 600px;
+		margin: 20px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#column-center-2 img {
+		width: 320px;
+	}
+	#news-day {
+		flex-basis: 320px;
+	}
+	#fixer-left {
+		padding-right: 50px;
+	}
+	#buttons {
+		margin-top: 80px;
+	}
+
+@media (max-width: 960px) {
+	.select-wrapper {
+		display: none;
+	}
+}
+@media (max-width: 910px) {
+	#menu-container {
+		display: none;
+	}
+
+	#logo {
+		padding-left: 75px;
+	}
+	#small-menu {
+		padding-left: 25px;
+		display: block;
+	}
+	#info {
+
+	}
+/*	#small-info {
+		display: block;
+		min-width: 250px;
+		height: 100px;
+		margin: 0 auto;
+	}
+	#small-info div {
+		position: relative;
+		top: 0;
+		right: 0;
+		display: inline-block;
+		margin: 0 auto;
+	}
+*/
+
+}
+
+@media (max-width: 560px) {
+	#datetime {
+		display: none;
+	}
+	#search {
+		display: none;
+	}
+	#searcher {
+		position: absolute;
+		top: 18px;
+	}
+	#text-bar {
+		margin: 0 auto;
+		width: 70%;
+		font-size: 14px;
+	}
+	#header {
+		height: 50px;
+	}
+	#logo {
+		display: none;
+	}
+	#small-logo {
+		display: block;
+		position: absolute;
+		top: 13px;
+		margin-left: 75px;
+	}
+	#small-menu {
+		position: absolute;
+		top: 18px;	
+	}
+}
+@media (max-width: 435px) {
+	#text-bar {
+		font-size: 12px;
+		width: 80%;
+
+	}
+}
