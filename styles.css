@@ -324,21 +324,28 @@ a {
 
 #special-news {
 	margin-top: 20px;
-	background-color: #FFFFFF;
+	background-color: #f9f9f9;
 	width: 960px;
 	height: 400px;
 }
 
-
-.bottom-banner {
+#bottom-news {
+	display: flex;
+}
+#best-bot-news {
+	width: 390px;
+	height: 380px;
+	background-color: white;
+}
+#bottom-banner {
 	height: 280px;
 	position: relative;
 }
-.bottom-banner a {
+#bottom-banner a {
 	color: white;
 }
 
-.bottom-img {
+#bottom-img {
 	width: 570px;
 }
 
@@ -348,7 +355,7 @@ a {
 	padding-left: 20px;
 }
 
-.bottom-banner-txt {
+#bottom-banner-txt {
 	width: 570px;
 	position: absolute;
 	top: 120px;
@@ -383,15 +390,7 @@ a {
 
 		}
 
-#special-news img {
-	float: left;
 
-}
-#best-news {
-	width: 390px;
-	float: right;
-
-}
 		.news-item-2 {
 		padding-left: 18px;
 		margin-bottom: 38px;
@@ -515,7 +514,6 @@ a {
 #callme {
 	color: white;
 	margin-left: 45px;
-
 }
 
 #phone-number {
@@ -561,6 +559,7 @@ a {
 	background-image: url('img/bg.png');
 	z-index: 11;
 }
+
 #popup {
 	width: 0px;
 	height: 0px;
@@ -578,14 +577,9 @@ a {
 	border: 1px solid blue;
 	color: blue;
 	font-size: 16px;
-	}
+}
 
-/*#popup-left {
-	float: left;
-	width: 20px;
-	margin-left: 20px;
-	z-index: 20;
-}*/
+
 #small-logo {
 	display: none;
 }
@@ -595,8 +589,59 @@ a {
 #flex-container {
 	display: flex;
 }
+@media (max-width: 990px) {
+	#bottom-banner {
+		height: 340px;
+		width: 500px;
+	}
+	#best-bot-news {
+		width: 500px;
+		margin-top: 20px;
+	}
+	#bottom-banner, #bottom-banner-txt {
+		width: 500px;
+	}
+	.bot-ban-txt2 {
+		display: none;
+	}
+	#bottom-img {
+		width: 500px;
+	}
+	#special-news {
+		height: 800px;
+		display: flex;
+		justify-content: center;
+	}
+	#bottom-news {
+		flex-wrap: wrap;
+	}
+
+}
+@media (max-width: 960px) {
+	.select-wrapper {
+		display: none;
+	}
+}
+@media (max-width: 910px) {
+	#menu-container {
+		display: none;
+	}
+
+	#logo {
+		padding-left: 75px;
+	}
+	#small-menu {
+		padding-left: 25px;
+		display: block;
+	}
+	#info {
+
+	}
 
 @media (max-width: 830px) {
+	html {
+		overflow-x: hidden;
+	}
 	#flex-container {
 		flex-wrap: wrap;
 		justify-content: space-around;	
@@ -621,8 +666,8 @@ a {
 	#column-right {
 		margin-top: 40px;
 		display: flex;
-		justify-content: space-around;
 	}
+
 	#small-info {
 		display: flex;
 		flex-wrap: wrap;
@@ -645,6 +690,49 @@ a {
 	}
 	#central-container {
 		padding-top: 0;
+	}
+	#special-news {
+		width: 500px;
+	}
+	#special-news, #bottom-news, #bottom-banner, #bottom-img {
+		width: 500px;
+	}
+	#bottom-flex {
+		width: 500px;
+	}
+}
+
+@media (max-width: 560px) {
+	#datetime {
+		display: none;
+	}
+	#search {
+		display: none;
+	}
+	#searcher {
+		position: absolute;
+		top: 18px;
+	}
+	#text-bar {
+		margin: 0 auto;
+		width: 70%;
+		font-size: 14px;
+	}
+	#header {
+		height: 50px;
+	}
+	#logo {
+		display: none;
+	}
+	#small-logo {
+		display: block;
+		position: absolute;
+		top: 13px;
+		margin-left: 75px;
+	}
+	#small-menu {
+		position: absolute;
+		top: 18px;	
 	}
 }
 
@@ -718,77 +806,34 @@ a {
 	#buttons {
 		margin-top: 80px;
 	}
+	#column-right img {
+		margin: 0 20px;
+	}
+	#column-right {
+		width: 500px;
+		overflow-x: scroll;
+	}
+	#bottom-flex, #special-news, #bottom-news, #bottom-banner, #bottom-img {
+		width: 320px;
+	}
+	#bottom-banner {
+		height: 220px;
+	}
+	#bottom-news article {
+		height: 220px;
+	}
+	.bottom-categ {
+		font-size: 10px;
+	}
+	#bottom-banner-txt {
+		font-size: 12px;
+		width: 300px;
+	}
+	.bottom-date, .bottom-time {
+		font-size: 12px;
+		top: 170px;
+	}
 
-@media (max-width: 960px) {
-	.select-wrapper {
-		display: none;
-	}
-}
-@media (max-width: 910px) {
-	#menu-container {
-		display: none;
-	}
-
-	#logo {
-		padding-left: 75px;
-	}
-	#small-menu {
-		padding-left: 25px;
-		display: block;
-	}
-	#info {
-
-	}
-/*	#small-info {
-		display: block;
-		min-width: 250px;
-		height: 100px;
-		margin: 0 auto;
-	}
-	#small-info div {
-		position: relative;
-		top: 0;
-		right: 0;
-		display: inline-block;
-		margin: 0 auto;
-	}
-*/
-
-}
-
-@media (max-width: 560px) {
-	#datetime {
-		display: none;
-	}
-	#search {
-		display: none;
-	}
-	#searcher {
-		position: absolute;
-		top: 18px;
-	}
-	#text-bar {
-		margin: 0 auto;
-		width: 70%;
-		font-size: 14px;
-	}
-	#header {
-		height: 50px;
-	}
-	#logo {
-		display: none;
-	}
-	#small-logo {
-		display: block;
-		position: absolute;
-		top: 13px;
-		margin-left: 75px;
-	}
-	#small-menu {
-		position: absolute;
-		top: 18px;	
-	}
-}
 @media (max-width: 435px) {
 	#text-bar {
 		font-size: 12px;
