@@ -29,12 +29,12 @@ $mail->addAddress('timur53shakirov@mail.ru');     // Кому будет ухо�
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заказ звонка';
-$mail->Body    = '' .$name . .$surname. ' оставил заявку, его телефон ' .$phone'
+$mail->Body    = '' .$name . .$surname . ' оставил заявку, его телефон ' .$phone;
 $mail->AltBody = '';
 
 if(!$mail->send()) {
     echo 'Error';
 } else {
-    header('index.html');
+    header('location: thank-you.html');
 }
 ?>
